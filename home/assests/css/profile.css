@@ -1,0 +1,93 @@
+.profile {
+    margin-top: 80px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    direction: rtl;
+
+}
+
+.sidebar a {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    color: black;
+
+}
+
+.sidebar a:hover {
+    background-color: rgb(222, 226, 230);
+}
+
+.img-profile {
+    width: 120px;
+}
+
+.img-profile img {
+    width: 100%;
+    border-radius: 50%;
+
+}
+
+.profile .notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile .notification-body {
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+    align-items: center;
+}
+
+.profile .notification h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+
+}
+
+.profile .notification .notification-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #fce6e9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.profile .notification .notification-icon i {
+    font-size: 16px;
+    color: rgb(230, 31, 91);
+
+}
+
+.profile .notification .notification-text h3 {
+    font-size: 16px;
+    color: rgb(19, 67, 97);
+    margin-bottom: 5px;
+}
+
+.profile .notification .notification-text p {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 5px;
+
+}
+
+.profile .notification .notification-text span {
+    font-size: 12px;
+    color: #adb5bd;
+}
+.profile .notification-item{
+    background-color: #f8f9fa;
+    ;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 15px;
+}

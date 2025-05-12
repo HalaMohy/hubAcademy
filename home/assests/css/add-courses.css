@@ -1,0 +1,36 @@
+.add-courses{
+margin-top: 70px;
+padding: 10px;
+margin-bottom: 20px;
+direction: rtl;
+
+}
+.add-courses h2{
+    font-weight: 600;
+color: rgb(19, 67, 97);
+margin-top: 20px;
+padding: 20px 0;
+text-align: center;
+
+}
+.add-courses-body{
+box-shadow: 0 2px 20px rgba(0, 0, 0, 0.087);
+border-radius: 15px;
+padding: 25px;
+
+}
+ .add-courses .content-course{
+background-color: #f8f9fa;
+border-radius: 8px;
+padding: 20px;
+}
+.add-courses h4{
+    color: rgb(19, 67, 97);
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.add-courses .content-cource {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+}

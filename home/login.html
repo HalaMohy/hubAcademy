@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="./images/logo.png">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./assests/css/public.css">
+    <link rel="stylesheet" href="./assests/css/signup.css">
+    <title>اكاديمية hub</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg ">
+
+        <div class="container">
+            <a href="index.html">
+                <div class="nav-logo">
+                    <img src="./images/logo.png" />
+
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+                <ul class="navbar-nav ms-auto" id="navbarNav">
+                 
+                        <!--<li class="nav-item"></li>
+                        <a class="nav-item nav-link active" href="index.html">الصفحة الرئيسية <span
+                                class="sr-only">(current)</span></a>
+                        <li class="nav-item"></li>
+                        <a class="nav-item nav-link" href="courses.html">الدورات</a>
+                        <li class="nav-item">
+                            <a class="nav-item nav-link join" href="signup.html">انضم لنا</a>
+                        </li>
+                        <a class="nav-link" href="add-courses.html">اضافة الدورة</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="student-courses.html">دوراتي </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="moderator-courses.html">دوراتي </a>
+                        </li>
+                    -->
+                        </ul>
+    
+                </div>
+            </div>
+    </nav>
+
+    <div class='login'>
+        <div class="container">
+            <form action="" class='form'id="loginForm">
+                <h2 class='text-center mb-4'> تسجيل الدخول </h2>
+                
+                <div class="mb-4 text-end">
+                    <label for="email" class="form-label">البريد الالكتروني </label>
+                    <input type="email" class="form-control " id="email" placeholder="البريد الكتروني" required />
+                </div>
+                <div class="mb-4 text-end">
+                    <label for="password" class="form-label">كلمة المرور </label>
+                    <input type="password" class="form-control" id="password" placeholder="كلمة المرور" />
+                </div>
+                <p class='text-end txt-login'>ليس لديك حساب مسبقا؟ <a href='signup.html'>تسجيل</a></p>
+                <div >
+                    <input type="submit" name=""value="تسجيل" id="" class='btn btn-submit w-100' />
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class='social-media'>
+                            <h3>صفحات التواصل</h3>
+                            <ul class='d-flex gap-4'>
+                                <li class='li-item'><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li class='li-item'><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                <li class='li-item'><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 contant">
+                        <h3>تواصل معنا</h3>
+                        <ul class="">
+                            <li class='d-flex gap-3 justify-content-start'>
+                                <p>32456789</p>
+                                <i class="fa-solid fa-phone"></i>
+                            </li>
+                            <li class='d-flex gap-3'>
+                                <p> Hala@gmail.com</p>
+                                <i class="fa-solid fa-envelope"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 final-logo">
+                        <div class='img-footer'>
+                            <img src='./images/logo.png' alt="" class='w-100' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./assests/js/main.js"></script>
+    <script src="./assests/js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="./images/logo.png">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./assests/css/public.css">
+    <link rel="stylesheet" href="./assests/css/add-courses.css">
+    <title>اكاديمية hub اضافة دورة </title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ">
+
+        <div class="container">
+            <a href="index.html">
+                <div class="nav-logo">
+                    <img src="./images/logo.png" />
+
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+                <ul class="navbar-nav ms-auto" id="navbarNav">
+                 
+                        <!--<li class="nav-item"></li>
+                        <a class="nav-item nav-link active" href="index.html">الصفحة الرئيسية <span
+                                class="sr-only">(current)</span></a>
+                        <li class="nav-item"></li>
+                        <a class="nav-item nav-link" href="courses.html">الدورات</a>
+                        <li class="nav-item">
+                            <a class="nav-item nav-link join" href="signup.html">انضم لنا</a>
+                        </li>
+                        <a class="nav-link" href="add-courses.html">اضافة الدورة</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="student-courses.html">دوراتي </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="moderator-courses.html">دوراتي </a>
+                        </li>
+                    -->
+                        </ul>
+    
+                </div>
+            </div>
+    </nav>
+
+    <section class="add-courses">
+        <div class="container">
+            <h2>اضافة دورة جديدة</h2>
+            <div class="row">
+                <div class="col-md-8 m-auto">
+                    <form>
+                        <div class="add-courses-body">
+                            <div class="main-inf border-bottom">
+                                <h3 class="title-h3">المعلومات الاساسية</h3>
+                                <div class="d-flex flex-column gap-2 my-4">
+                                    <label for="">عنوان الدورة</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="d-flex flex-column gap-2 my-4 ">
+                                    <label for=""> التصنيف</label>
+                                    <select name="" id="" class="form-select">
+                                        <option value="">اختار التصنيف</option>
+                                        <option value="web">ويب</option>
+                                        <option value="mobile">موبايل</option>
+
+                                    </select>
+                                </div>
+                               
+                                <div>
+                                    <label for="">وصف الدورة</label>
+                                    <textarea name="" id="" rows="3" class="form-control"></textarea>
+
+
+                                </div>
+                                <div class="d-flex flex-column gap-2 my-4">
+                                    <label for="">صورة الدورة</label>
+                                    <input type="file" accept="image/*" class="form-control">
+
+
+                                </div>
+                            </div>
+                            <!-- <div class="border-bottom pb-3">
+                                <h3 class="title-h3 py-2 my-2">محتوى الدورة</h3>
+                                <div class="content-course">
+                                    <h4>الوحدة الاولى</h4>
+                                    <div class="d-flex gap-3 flex-column">
+                                        <label for="">عنوان الوحدة</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="bg-white p-3 my-3 rounded">
+                                        <h4>الدرس الاول</h4>
+                                        <div class="d-flex gap-2">
+                                            <div class="d-flex gap-3 flex-column w-50">
+                                                <label for="">عنوان الدرس</label>
+                                                <input type="text" class="form-control">
+
+                                            </div>
+                                            <div class="d-flex gap-3 flex-column w-50">
+                                                <label for="">الفيديو</label>
+                                                <input type="file" accept="video/*" class="form-control">
+
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="btn my-3 border btn-project">+ اضافة درس   </button>
+
+
+                                        </div>
+
+                                    </div>
+                                  
+                                </div>
+                                <div>
+
+                                    <button class="btn my-3 border btn-project">+ اضافة وحدة جديدة </button>
+
+
+
+                                </div>
+
+                            </div> -->
+                        
+                            <div>
+                                <h3 class="title-h3 py-2 my-3">محتوى الدورة</h3>
+
+                                <div class="contant" id="contant">
+                                    <div class="course-material-container content-cource">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h4 class="mb-0">مادة تعليمية <span class="material-number"></span></h4>
+                                            <button type="button" class="btn btn-sm btn-danger remove-material">
+                                                <i class="fas fa-times"></i> حذف
+                                            </button>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-7">
+                                                <label>رفع الملف </label>
+                                                <input type="file" class="form-control" name="Materials[].File"
+                                                    accept="video/*,application/pdf">
+                                                <input type="hidden" name="Materials[].CourseId" id="currentCourseId">
+                                            </div>
+                                            <div class="col-md-5">
+                                                <label>نوع المادة </label>
+                                                <select class="form-select" name="Materials[].Type">
+                                                    <option value="video">فيديو</option>
+                                                    <option value="document">مستند</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-project mt-3" id="add-contant">اضافة مادة جديدة</button>
+
+                            </div>
+                           
+                           <div class="courses-price">
+                                <h3 class="title-h3 py-2 my-2">معلومات التسعير</h3>
+                                <div class="d-flex gap-3 flex-column">
+                                    <label for="">السعر </label>
+                                    <input type="number" class="form-control">
+                                </div>
+
+                            </div>
+                            <div class="my-3">
+<input type="submit" value="اضافة دورة" class="btn-project btn">
+
+                            </div>
+
+                        </div>
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class='social-media'>
+                            <h3>صفحات التواصل</h3>
+                            <ul class='d-flex gap-4'>
+                                <li class='li-item'><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li class='li-item'><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                <li class='li-item'><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 contant">
+                        <h3>تواصل معنا</h3>
+                        <ul class="">
+                            <li class='d-flex gap-3 justify-content-start'>
+                                <p>32456789</p>
+                                <i class="fa-solid fa-phone"></i>
+                            </li>
+                            <li class='d-flex gap-3'>
+                                <p> Hala@gmail.com</p>
+                                <i class="fa-solid fa-envelope"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 final-logo">
+                        <div class='img-footer'>
+                            <img src='./images/logo.png' alt="" class='w-100' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="./assests/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+.cources {
+    margin-top: 70px;
+    padding: 35px 0px;
+}
+
+.cources .categore {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cources .cources-title {
+    background-color: rgba(33, 37, 41, 0.03);
+    border-radius: 10px;
+    padding: 15px 8px;
+}
+
+.cources .cources-title label {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cources h2 {
+    color: rgb(19, 67, 97);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cources .btn-cources {
+    background-color: rgb(230, 31, 91) !important;
+    color: #fff !important;
+
+}
+
+
+.cources .courcse-card {
+    background-color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+
+}
+
+.cources .card-img {
+    height: 200px;
+}
+
+.cources .card-img img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.cources .card-body {
+    padding: 10px;
+}
+
+.cources .card-body h4 {
+    font-size: 15px;
+    font-weight: 700;
+    height: 40px;
+    color: rgb(19, 67, 97);
+}
+
+.cources .card-body .card-p {
+    text-align: end;
+    height: 60px;
+}
+
+.cources .price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FF0000 !important;
+}
+
+.cources-body {
+    background-color: rgba(33, 37, 41, 0.03);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px 10px;
+}
+
+.edit-btn{
+    background-color: #3498db;
+    color: white;
+}
+.btn-cour{
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+.btn-delete{
+    background-color: #e74c3c;
+    border: 0;
+    color: white;
+}
+.btn-show{
+    background-color: #e0e0e0;
+}
+.edit-btn{
+background-color:#3498db;
+color: white;
+}
+.btn-cour{
+border-radius: 8px;
+padding: 8px 15px;
+font-size: 14px;
+}
+.btn-delete{
+    background-color:#e74c3c;
+    border: 0;
+    color: white;
+}
+.btn-show{
+    background-color: #e0e0e0;
+}

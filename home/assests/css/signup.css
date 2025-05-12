@@ -1,0 +1,40 @@
+.login .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+}
+
+.login {
+    min-height: 90vh;
+    margin-top: 70px;
+}
+
+.login .form {
+    max-width: 450px;
+    width: 100%;
+    border: 1px solid rgb(222, 226, 230);
+    border-radius: 10px;
+    padding: 20px  15px;
+box-shadow: 0 0 10px rgb(222, 226, 230) ;
+}
+
+.login h2 {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.login .btn-submit {
+    background-color: rgb(230, 31, 91) !important;
+    color: #fff !important;
+}
+
+.btn-card {
+    background-color: rgb(230, 31, 91) !important;
+    color: #fff !important;
+}
+
+.login .txt-login{
+    font-size:small;
+}
