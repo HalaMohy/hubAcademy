@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
        
          <ul class="dropdown-menu">
            <li><a class="dropdown-item" href="profile.html">الملف الشخصي</a></li>
-           <li><a class="dropdown-item" href="#"> تسجيل الخروج</a></li>
+           <li><a class="dropdown-item" onClick='logout()'> تسجيل الخروج</a></li>
          </ul>
          </li>
        </div>
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
            <li><a class="dropdown-item" href="../admin/dashboard.html">لوحة التحكم</a></li>
                       <li><a class="dropdown-item" href="profile.html">الملف الشخصي</a></li>
 
-           <li><a class="dropdown-item" href="#"> تسجيل الخروج</a></li>
+           <li><a class="dropdown-item" onClick='logout()'> تسجيل الخروج</a></li>
          </ul>
          </li>
        </div>

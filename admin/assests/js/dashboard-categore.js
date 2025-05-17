@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 method: "POST",
                 headers: {
                     "Content-Type": 'application/json',
-                    "Authorization ": `Bearer ${token}`
+                    "Authorization": `Bearer ${token}`
                 },
                 body: JSON.stringify({
                     name: name
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     var nameInput;
     const editModal = new bootstrap.Modal(document.getElementById('editModal'))
     function EditEvents() {
-        const editButton = documentq.querySelectorAll('.btn-edit');
+        const editButton = document.querySelectorAll('.btn-edit');
         editButton.forEach((b) => {
             b.addEventListener('click', async (e) => {
                 selectId = e.currentTarget.dataset.id;
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             })
         })
-        const deleteButton = document.querySelectorAll('btn-delete');
+        const deleteButton = document.querySelectorAll('.btn-delete');
         deleteButton.forEach((b) => {
             b.addEventListener('click', async (e) => {
                 selectId = e.currentTarget.dataset.id;

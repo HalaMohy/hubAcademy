@@ -4,9 +4,9 @@ btnSideBar.addEventListener ('click', (e)=> {
     e.preventDefault();
 sidebar.classList.toggle('open')
 })
-const sidebarLinks=document.querySelectorAll('.list.sidebar a')
+const sidebarLink=document.querySelectorAll('.list.sidebar a')
 const currentPage=window.location.pathname.split('/').pop();
-sideparLinks.array.forEach(link => {
+sidebarLink.forEach(link => {
     const linkPage =link.getAttribute('href').split('/').pop();
     if(currentPage == linkPage){
         link.classList.add('active')
