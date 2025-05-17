@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         categoryy.innerHTML += selectCategory;
     })
 
-    async function getCourses() {
+    async function getCources() {
         try {
             if (query) {
                 const response = await fetch(`https://localhost:7170/api/Courses?query=${query}`, {
                     method: `GET`
                 })
                 Courses = await response.json();
-                displayCourses()
+                displayCourse()
             } else {
                 const response = await fetch(`https://localhost:7170/api/Courses`, {
                     method: `GET`
@@ -30,10 +30,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.log(err)
         }
     }
-    getCourses();
-    async function displayCourses() {
-        const coursesBody = document.querySelector('.cources-body');
-        coursesBody.innerHTML='';
+    getCources();
+    async function displayCourse() {
+        const courcesBody = document.querySelector('.cources-body');
+        courcesBody.innerHTML = '';
         console.log(Courses)
         Courses.forEach((c) => {
             let coursebody = `
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
             `
-            coursesBody.innerHTML+=coursebody
+            courcesBody.innerHTML += coursebody
         })
     }
     categoryy.addEventListener('change', async (e) => {
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 method: `GET`
             })
             Courses = await response.json();
-            displayCourses()
+            displayCourse()
 
         } else {
             const response = await fetch(`https://localhost:7170/api/Categorys/${id}`, {
@@ -103,13 +103,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.log(categorrreee)
             Courses = categorrreee.courses || [];
             console.log(Courses);
-            await displayCourses();
+            await displayCourse();
         }
     })
-    const text=document.getElementById('text');
-    text.addEventListener('input',()=>{
+    const text = document.getElementById('text');
+    text.addEventListener('input', () => {
         console.log(text.value)
-        query=text.value;
-        getCourses();
+        query = text.value;
+        getCources();
     })
 })
