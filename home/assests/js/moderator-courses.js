@@ -1,58 +1,43 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    var query;
-    var Courses;
-    const categore = JSON.parse(localStorage.getItem("category"));
-    const categoryy = document.getElementById('categore')
-    categore.forEach((c) => {
-        let selectCategory = `
-                            <option value="${c.id}">${c.name}</option>
+    const token = localStorage.getItem('token');
+    var Course;
 
-    `
-        categoryy.innerHTML+=selectCategory;
-    })
-
-    async function getCources() {
+    async function getCourse() {
         try {
-            if (query) {
-                const response = await fetch(`https://localhost:7170/api/Courses?query=${query}`, {
-                    method:`GET`
-                })
-                Courses=await response.json();
-                displayCourse()
-            } else {
-                console.log('hii')
-                const response = await fetch(`https://localhost:7170/api/Courses`, {
-                    method:`GET`
-                })
-                Courses = await response.json();
-                                displayCourse()
-
-            }
-
+            const response = await fetch('https://localhost:7170/api/Courses/Moderator', {
+                method: "GET",
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            })
+            console.log(response)
+            Course = await response.json();
+            console.log(Course);
+            displayCourse();
         } catch (err) {
-            console.log(err)
         }
     }
-   await getCources();
+
+    getCourse();
+
     async function displayCourse() {
         const courcesBody = document.querySelector('.cources-body');
         courcesBody.innerHTML = '';
-        console.log(Courses)
-        Courses.forEach((c) => {
-            let coursebody = `
-            <div class="col-lg-4 col-sm-6 mb-3">
-                    <div class="course-card">
+
+        Course.forEach((c) => {
+            let bodyCou = `
+                <div class="col-lg-4 col-sm-6 mb-3">
+                    <div class="courcse-card">
                         <div class="card-img">
-                            <img src="${c.image}"
-                                alt="" class="w-100">
+                            <img src="${c.image}" alt="" class="w-100">
                         </div>
                         <div>
                             <div class="card-body">
-                                <h4> ${c.title}</h4>
+                                <h4>${c.title}</h4>
                                 <p class="card-p">${c.description}</p>
                                 <div class="d-flex justify-content-between">
                                     <div class="d-flex gap-2 align-items-center">
-                                        <svg fill="#7a7a7a" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                       <svg fill="#7a7a7a" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px"
                                             viewBox="-5 -5 60.00 60.00" xml:space="preserve" stroke="#7a7a7a">
                                             <g id="SVGRepo_bgCarrier" stroke-width="0">
@@ -75,46 +60,64 @@ document.addEventListener('DOMContentLoaded', async () => {
                                     <p class="price">${c.price}$</p>
                                 </div>
                             </div>
-                            <div class="p-2 border-top">
-                                <a href="cources-details.html?id=${c.id}" class="btn-cources btn w-100">عرض التفاصيل</a>
+                            <div class="p-2 border-top d-flex justify-content-between">
+                                <a href="edit-courses.html?id=${c.id}" class="edit-btn btn-cour">تعديل <i class="fa-solid fa-pen-to-square"></i></a>
+                                <button class="btn-cour btn-delete" data-id='${c.id}'>حذف <i class="fa-solid fa-trash"></i></button>
+                                <a href="cources-details.html?id=${c.id}" class="btn-cour btn btn-show">عرض <i class="fa-solid fa-eye"></i></a>
                             </div>
                         </div>
-
                     </div>
                 </div>
+            `;
+            courcesBody.innerHTML += bodyCou;
+        });
 
+        EditEvents();
+    }
 
-            `
-            courcesBody.innerHTML+=coursebody
+    function EditEvents() {
+        const deleteBtn = document.querySelectorAll('.btn-delete');
+
+        deleteBtn.forEach((b) => {
+            b.addEventListener('click', async (e) => {
+                const selectId = e.currentTarget.dataset.id;
+                deleteCourse(selectId);
+            })
         })
     }
-    categoryy.addEventListener('change', async (e) => {
-        const id = e.target.value;
-        if (id == '') {
-            const response = await fetch(`https://localhost:7170/api/Courses`, {
-                method: `GET`
-            })
-            Courses = await response.json();
- displayCourse ();
 
-        } else {
-            const response=await fetch(`https://localhost:7170/api/Categorys/${id}`, {
-                method: 'GET'
+    async function deleteCourse(id) {
+        try {
+            Swal.fire({
+                title: "هل انت متاكد من الحذف ؟",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "نعم! احذف هذا"
+            }).then(async (result) => {
+                if (result.isConfirmed) {
+                    const response = await fetch(`https://localhost:7170/api/Courses/${id}`, {
+                        method: 'DELETE',
+                        headers: {
+                            "Authorization": `Bearer ${token}`,
+                        }
+                    })
 
+                    console.log(response);
+
+                    if (response.ok) {
+                        Swal.fire({
+                            title: "تم الحذف!",
+                            text: "تم الحذف بنجاح.",
+                            icon: "success"
+                        })
+                        await getCourse();
+                    }
+                }
             })
-            const categorrreee=await response.json();
-            console.log(categorrreee)
-            Courses = categorrreee.courses || [];
-            console.log(Courses);
-            await displayCourse();
+        } catch (err) {
+            console.log(err)
         }
-    })
-    const text = document.getElementById('text');
-    text.addEventListener('input',() => {
-        console.log(text.value);
-        query = text.value;
-        getCources();
-    })
-
-
+    }
 })

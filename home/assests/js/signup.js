@@ -1,9 +1,25 @@
 const registerform = document.getElementById("registerform");
+const userTypeSelect = document.getElementById('UserType');
+const moderatorFieldsDiv = document.getElementById('moderatorFields');
+
+userTypeSelect.addEventListener('change', function () {
+  if (this.value === 'Moderator') {
+    moderatorFieldsDiv.classList.remove('d-none');
+  } else {
+    moderatorFieldsDiv.classList.add('d-none');
+
+  }
+});
 registerform.addEventListener('submit', async (e) => {
   e.preventDefault();
   const userName = document.getElementById('userName').value;
   const password = document.getElementById('password').value;
   const email = document.getElementById('email').value;
+   const userTypeValue = document.getElementById('UserType').value;
+  const bio = document.getElementById('bio').value;
+  const specialty = document.getElementById('specialty').value;
+  const certificateFilesInput = document.getElementById('certificateFiles');
+
   const confirmPassword = password;
   if (userName.length < 6) {
     const Toast = Swal.mixin({
@@ -117,15 +133,21 @@ registerform.addEventListener('submit', async (e) => {
 
   }
   try {
+    const formData = new FormData();
+    formData.append('UserName', userName);
+    formData.append('Email', email);
+    formData.append('Password', password);
+    formData.append('ConfirmPassword', password);
+    formData.append('UserType', userTypeValue);
+
+    if (userTypeValue === 'Moderator') {
+      formData.append('Bio', bio);
+      formData.append('Specialty', specialty);
+      formData.append('CertificateFiles', certificateFilesInput.files[0]);
+    }
     const response = await fetch('https://localhost:7170/api/Account/register', {
       method: "POST",
-      headers: { "content-Type": "application/json" },
-      body: JSON.stringify({
-        userName,
-        password,
-        email,
-        confirmPassword
-      })
+      body:formData
     })
     console.log(response)
     if (response.ok) {

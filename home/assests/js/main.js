@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('token')) {
         const navbarNav = document.getElementById('navbarNav');
         console.log(navbarNav);
-        inf = JSON.parse(atob(localStorage.getItem('token').split('.')[1]))
-        console.log(inf)
-        //const namekeys=keys
-        console.log(inf.username);
-        role = inf.role;
-        console.log(role);
+       const token = localStorage.getItem('token');
+const payload = JSON.parse(atob(token.split('.')[1]));
+
+// الوصول إلى القيم:
+
+const role = payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
         //Student , Moderator , Admin
         if (role =='Student') {
             let ulBody = `
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   </a>
 
-  <ul class="dropdown-menu">
+  <ul class="dropdown-menu dropdown-menu-end">
     <li><a class="dropdown-item" href="profile.html">الملف الشخصي</a></li>
     <li><a class="dropdown-item" onClick='logout()'> تسجيل الخروج</a></li>
   </ul>
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
        
          </a>
        
-         <ul class="dropdown-menu">
+         <ul class="dropdown-menu dropdown-menu-end">
            <li><a class="dropdown-item" href="profile.html">الملف الشخصي</a></li>
            <li><a class="dropdown-item" onClick='logout()'> تسجيل الخروج</a></li>
          </ul>
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
        
          </a>
        
-         <ul class="dropdown-menu">
+         <ul class="dropdown-menu dropdown-menu-end">
            <li><a class="dropdown-item" href="../admin/dashboard.html">لوحة التحكم</a></li>
                       <li><a class="dropdown-item" href="profile.html">الملف الشخصي</a></li>
 

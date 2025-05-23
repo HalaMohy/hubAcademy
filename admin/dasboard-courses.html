@@ -18,7 +18,7 @@
 
     <section class="dashboard">
         <button class="btn active btn-sidebar" id="btn-sidebar"><i class="fa-solid fa-bars"></i></button>
-        <div class="sidebar" id="sidebar">
+      <div class="sidebar" id="sidebar">
             <div class="sidebar-logo">
                 <img src="./assests/image/logo.png  " alt="">
             </div>
@@ -44,6 +44,13 @@
                     </a>
 
                 </li>
+                   <li class="">
+                    <a href="dashboard-pendingCourse.html">
+                        <i class="fa-solid fa-book"></i>
+                        ادارة الكورسات المعلقة
+                    </a>
+
+                </li>
                 <li class="">
                     <a href="dasboard-categore.html">
                         <i class="fa-solid fa-layer-group"></i>
@@ -59,9 +66,9 @@
 
                 </li>
                 <li class="">
-                    <a href="dasboard-notification.html">
+                    <a href="dasboard-moderator.html">
                         <i class="fa-solid fa-bell"></i>
-                        الاشعارات
+                        ادارة المشرفين
                     </a>
 
                 </li>
@@ -73,9 +80,9 @@
 
                 </li>
                 <li class="">
-                    <a href="">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        تسجيل الخروج
+                    <a onClick="logout()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    تسجيل الخروج
                     </a>
 
                 </li>
@@ -107,11 +114,13 @@
                                         <th scope="col"> عنوان الكورس</th>
                                         <th scope="col">التصنيف </th>
                                         <th scope="col">المدرب</th>
-                                        <th scope="col">الاجراءات</th>
+                                                                                <th scope="col">الطلاب </th>
+
+                                        <th scope="col">معاينة </th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <!-- <tr>
                                         <th scope="row"> تطوير الويب</th>
                                         <td> الويب </td>
                                         <td> احمد محمد</td>
@@ -143,7 +152,7 @@
                                                 <i class="fa-solid fa-pen-to-square"></i>
                                             </button>
                                         </td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>
@@ -198,6 +207,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+        <script src="./assests/js/dashboard-courses.js"></script>
 
 </body>
 

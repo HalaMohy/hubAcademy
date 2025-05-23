@@ -64,7 +64,7 @@
                     <h2>تطوير الويب الشامل</h2>
                     <div class="title-details">
 
-                        <span><i class="fa-solid fa-tag"></i>تطوير الويب
+                        <span class="category"><i class="fa-solid fa-tag"></i>تطوير الويب
 
 
                         </span>
@@ -87,9 +87,9 @@
 
 
                     </div>
-
+<!-- 
                     <div class="content">
-                        <h3 class="title">محتوى الدورة </h3>
+                        <h3 class="title">محتوى الدورة </h3> -->
                         <!-- <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
@@ -167,8 +167,7 @@
                         </li>
                     </ul>
                    </div>
-                    </div>
-                    <div class="teacher">
+                   <div class="teacher">
                         <h3 class="title">المدرب </h3>
                         <div class="teacher-body">
                             <svg fill="#7a7a7a" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
@@ -189,7 +188,7 @@
                                 </g>
                             </svg>
 
-                            <p>حلا</p>
+                            <p id="moderator"></p>
 
                         </div>
 
@@ -210,7 +209,7 @@
 
                         </div>
                         <div class="commits">
-                            <div class="commit">
+                            <!-- <div class="commit">
                                 <div class="d-flex gap-3">
                                     <svg fill="#7a7a7a" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px"
@@ -326,23 +325,23 @@
                                 </div>
 
 
-                            </div>
+                            </div> -->
                             <div class="addRating ">
-                                <form action="POST">
+                                <form id="ratingForm">
                                     <h3 class="title-rating">اضف تقييمك</h3>
-                                    <div class="d-flex gap-3">
+                                    <div class="d-flex gap-3 align-items-center">
                                         <label for="">تقييمك:</label>
-                                        <div class="star-rating">
-                                            <i class="fa-regular fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
+                                        <div class="star-rating" id="starRating">
+                                            <i class="fa-regular fa-star" data-value="1"></i>
+                                            <i class="fa-regular fa-star" data-value="2"></i>
+                                            <i class="fa-regular fa-star" data-value="3"></i>
+                                            <i class="fa-regular fa-star" data-value="4"></i>
+                                            <i class="fa-regular fa-star" data-value="5"></i>
                                         </div>
                                     </div>
-                                    <div class="d-flex flex-column gap-1">
-                                        <label for="">اضف تعليقك</label>
-                                        <textarea rows="3" class="w-100 form-control">
+                                    <div class="d-flex flex-column gap-1 mt-3">
+                                        <label for="comment">اضف تعليقك</label>
+                                        <textarea id="comment" rows="3" class="w-100 form-control">
 
                                         </textarea>
                                     </div>
@@ -357,12 +356,12 @@
 
 
                     </div>
-
-                </div>
-                <div class="col-md-4">
+                    </div>
+                    
+<div class="col-md-4">
                     <div class="all overflow-hidden">
                         <div class="box-feature">
-                            <p class="price">99$</p>
+                            <p class="price">50$</p>
                             <div class="d-flex gap-3 align-items-center feature">
                                 <i class="fa-solid fa-certificate"></i>
                                 <p>شهادة معتمدة</p>
@@ -373,13 +372,13 @@
                                 <p>وصول مدى الحياة</p>
 
                             </div>
-                            <a class="btn-cource btn w-100" href="chekout.html">اشترك الان</a>
+                            <button class="btn-cource btn w-100" onclick="Subscription()">اشترك الان</button>
 
                         </div>
                         <div class="relation">
                             <h4>دورات ذات صلة</h4>
-                            <div class="relation-items">
-                                <div class="relation-item">
+                            <div id="items">
+                                <!-- <div class="relation-item">
                                     <div class="img-relation">
                                         <img src="https://imagedelivery.net/8T78ZpVGfNBEC4Ric8RkRg/7664be06-135e-4427-8625-1f18a7580000/original"
                                             alt="">
@@ -426,7 +425,7 @@
                                     </div>
                                 </div>
 
-                            </div>
+                            </div> -->
 
 
                         </div>
@@ -435,6 +434,8 @@
                 </div>
 
             </div>
+                </div>
+                
         </div>
 
 
@@ -480,9 +481,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 <script src="./assests/js/main.js"></script>
+<script src="./assests/js/courses-details.js"></script>
 </body>
 
 </html>

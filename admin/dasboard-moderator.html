@@ -9,16 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assests/css/dashboard.css">
-    <link rel="stylesheet" href="../home/assests/css/public.css">
-    <title>لوحة التحكم - اكاديمية hub</title>
+    <link rel="stylesheet" href="./assests/css/dahboard-moderator.css">
+    <title> ادارة الكورسات - اكاديمية hub</title>
 </head>
 
 <body>
 
     <section class="dashboard">
         <button class="btn active btn-sidebar" id="btn-sidebar"><i class="fa-solid fa-bars"></i></button>
-        <div class="sidebar" id="sidebar">
+    <div class="sidebar" id="sidebar">
             <div class="sidebar-logo">
                 <img src="./assests/image/logo.png  " alt="">
             </div>
@@ -93,108 +92,125 @@
         </div>
         <div class="main-content">
             <div class="title-main-content">
-                <div class="main-content-img">
+                <div class="main-contemt-img">
                     <img src="https://www.gravatar.com/avatar/?d=mp" alt="">
                 </div>
                 <div>
-                    <p>حلا محيي الدين</p>
+                    <p>حلا</p>
                     <span>مسؤول النظام</span>
-
                 </div>
             </div>
             <div class="main-dashboard">
-                <h2>لوحة التحكم</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="d-flex gap-2 flex-column align-items-center box-dashboard">
-                            <div class="circle-icon">
-                                <i class="fa-solid fa-users"></i>
-                            </div>
-                            <p>150</p>
-                            <span>اجمالي عدد المستخدمين</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="d-flex gap-2 flex-column align-items-center box-dashboard">
-                            <div class="circle-icon">
-                                <i class="fa-solid fa-book"></i>
-                            </div>
-                            <p>45</p>
-                            <span> الكورسات </span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="d-flex gap-2 flex-column align-items-center box-dashboard">
-                            <div class="circle-icon">
-                                <i class="fa-solid fa-dollar-sign"></i>
-                            </div>
-                            <p>150</p>
-                            <span> الارباح</span>
-                        </div>
-                    </div>
-                </div>
                 <div class="my-3 table-dashboard">
-                    <h2>اشهر الدورات</h2>
+                    <h2> ادارة المشرفين والموافقة عليهم</h2>
+                  
                     <div>
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">عنوان الكورس</th>
-                                    <th scope="col">المدرب</th>
-                                    <th scope="col">التصنيف</th>
-                                    <th scope="col">عرض</th>
+                                    <th scope="col"> الاسم </th>
+                                    <th scope="col"> البريد الالكتروني </th>
+                                    <th scope="col"> السيرة الذاتية </th>
+                                    <th scope="col"> التخصص </th>
+                                    <th scope="col"> الشهادة </th>
+                                    <th scope="col">الاجراءات</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">تطوير الويب</th>
-                                    <td>احمد محمد</td>
-                                    <td>تطوير الويب</td>
-                                    <td>
-                                        <a href="../home/">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">تطوير الويب</th>
-                                    <td>احمد محمد</td>
-                                    <td>تطوير الويب</td>
 
+                            </tbody>
+
+                            <!-- <tbody>
+                                <tr>
+                                    <th scope="row"> الويب</th>
                                     <td>
-                                        <a href="../home/cources-details.html">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </a>
+
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">تطوير الويب</th>
-                                    <td>احمد محمد</td>
-                                    <td>تطوير الويب</td>
+                                    <th scope="row"> الويب</th>
                                     <td>
-                                        <a href="../home/">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </a>
+
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
                                     </td>
                                 </tr>
-                            </tbody>
+                                <tr>
+                                    <th scope="row"> الويب</th>
+                                    <td>
+
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody> -->
                         </table>
                     </div>
-
                 </div>
 
             </div>
-
         </div>
-
     </section>
 
+    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="addModalLabel"> اضافة تصنيف جديد </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class='form'>
+                        <div class="mb-4 text-end">
+                            <label for="name" class="form-label"> اسم التصنيف </label>
+                            <input type="text" class="form-control " id="name" />
+                        </div>
 
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+                    <button type="button" class="btn btn-categore m-0" id="addCategore">اضافة </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="addModalLabel"> تعديل تصنيف </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class='form'>
+                        <div class="mb-4 text-end">
+                            <label for="editname" class="form-label"> اسم التصنيف </label>
+                            <input type="text" class="form-control " id="editname" />
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+                    <button type="button" class="btn btn-categore m-0" id="EditCategore">تعديل </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="./assests/js/dashboard.js"></script>
+    <script src="./assests/js/dashboard-pendingCourses.js"></script>
 </body>
 
 </html>

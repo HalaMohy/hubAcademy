@@ -29,8 +29,8 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
                 <ul class="navbar-nav ms-auto" id="navbarNav">
-                 
-                        <!--<li class="nav-item"></li>
+
+                    <!--<li class="nav-item"></li>
                         <a class="nav-item nav-link active" href="index.html">الصفحة الرئيسية <span
                                 class="sr-only">(current)</span></a>
                         <li class="nav-item"></li>
@@ -46,44 +46,60 @@
                             <a class="nav-link" href="moderator-courses.html">دوراتي </a>
                         </li>
                     -->
-                        </ul>
-    
-                </div>
+                </ul>
+
             </div>
+        </div>
     </nav>
 
-    <section class="add-courses">
+   <section class="add-courses">
         <div class="container">
-            <h2>اضافة دورة جديدة</h2>
+           <div class="feature-title">
+                <h2>
+                    اضافة دورة جديدة  <img
+                        src="https://imagedelivery.net/8T78ZpVGfNBEC4Ric8RkRg/3fd8dffb-0d0e-4e10-ff65-a5902eefca00/original"
+                        alt="">
+                </h2>
+            </div>
             <div class="row">
                 <div class="col-md-8 m-auto">
-                    <form>
+                    <form id="courseForm">
                         <div class="add-courses-body">
                             <div class="main-inf border-bottom">
                                 <h3 class="title-h3">المعلومات الاساسية</h3>
                                 <div class="d-flex flex-column gap-2 my-4">
-                                    <label for="">عنوان الدورة</label>
-                                    <input type="text" class="form-control">
+                                    <label for="title">عنوان الدورة</label>
+                                    <input type="text" class="form-control" id="title">
                                 </div>
                                 <div class="d-flex flex-column gap-2 my-4 ">
-                                    <label for=""> التصنيف</label>
-                                    <select name="" id="" class="form-select">
+                                    <label for="selectcategory"> التصنيف</label>
+                                    <select name="" class="form-select" id="selectcategory">
                                         <option value="">اختار التصنيف</option>
-                                        <option value="web">ويب</option>
-                                        <option value="mobile">موبايل</option>
+                                        <!-- <option value="web">ويب</option>
+                                        <option value="mobile">موبايل</option> -->
 
                                     </select>
                                 </div>
-                               
+
                                 <div>
-                                    <label for="">وصف الدورة</label>
-                                    <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                    <label for="descripation">وصف الدورة</label>
+                                    <textarea name="" rows="3" class="form-control" id="descripation"></textarea>
 
 
                                 </div>
+                                <div>
+                                    <label for="StartDate">بداية الدورة </label>
+                                    <input type="datetime-local" name="" rows="3" class="form-control" id="StartDate"/>
+
+                                </div>
+                                 <div>
+                                    <label for="EndDate">نهاية الدورة </label>
+                                    <input type="datetime-local" name="" rows="3" class="form-control" id="EndDate"/>
+
+                                </div>
                                 <div class="d-flex flex-column gap-2 my-4">
-                                    <label for="">صورة الدورة</label>
-                                    <input type="file" accept="image/*" class="form-control">
+                                    <label for="image">صورة الدورة</label>
+                                    <input type="file" accept="image/*" class="form-control" id="image">
 
 
                                 </div>
@@ -128,12 +144,12 @@
                                 </div>
 
                             </div> -->
-                        
+
                             <div>
                                 <h3 class="title-h3 py-2 my-3">محتوى الدورة</h3>
 
                                 <div class="contant" id="contant">
-                                    <div class="course-material-container content-cource">
+                                    <!-- <div class="course-material-container content-cource">
                                         <div class="d-flex justify-content-between align-items-center mb-3">
                                             <h4 class="mb-0">مادة تعليمية <span class="material-number"></span></h4>
                                             <button type="button" class="btn btn-sm btn-danger remove-material">
@@ -147,31 +163,41 @@
                                                     accept="video/*,application/pdf">
                                                 <input type="hidden" name="Materials[].CourseId" id="currentCourseId">
                                             </div>
-                                            <div class="col-md-5">
-                                                <label>نوع المادة </label>
-                                                <select class="form-select" name="Materials[].Type">
-                                                    <option value="video">فيديو</option>
-                                                    <option value="document">مستند</option>
 
-                                                </select>
-                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <button class="btn btn-project mt-3" id="add-contant">اضافة ملف جديد</button>
+
+                            </div>
+                            <div class="zoom-section border-bottom pb-3">
+                                <h3 class="title-h3 py-2 my-3">الجلسات المباشرة (اختياري)</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="d-flex flex-column gap-2 my-4">
+                                            <label for="zoomLink">رابط Zoom</label>
+                                            <input type="url" class="form-control" id="zoomLink"
+                                                placeholder="https://zoom.us/j/...">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex flex-column gap-2 my-4">
+                                            <label for="liveStartTime">تاريخ ووقت الجلسة المباشرة</label>
+                                            <input type="datetime-local" class="form-control" id="liveStartTime">
                                         </div>
                                     </div>
                                 </div>
-                                <button class="btn btn-project mt-3" id="add-contant">اضافة مادة جديدة</button>
-
                             </div>
-                           
-                           <div class="courses-price">
+                            <div class="courses-price">
                                 <h3 class="title-h3 py-2 my-2">معلومات التسعير</h3>
                                 <div class="d-flex gap-3 flex-column">
-                                    <label for="">السعر </label>
-                                    <input type="number" class="form-control">
+                                    <label for="price">السعر </label>
+                                    <input type="number" class="form-control" id="price">
                                 </div>
 
                             </div>
                             <div class="my-3">
-<input type="submit" value="اضافة دورة" class="btn-project btn">
+                                <input type="submit" value="اضافة دورة" class="btn-project btn">
 
                             </div>
 
@@ -232,7 +258,10 @@
     </footer>
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="./assests/js/main.js"></script>
+    <script src="./assests/js/add-courses.js"></script>
 </body>
 
 </html>

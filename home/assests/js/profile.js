@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded",async()=>{
-    inf = JSON.parse(atob(localStorage.getItem('token').split('.')[1]));
-    console.log('inf token',inf)
-    console.log(inf.username)
+const token=localStorage.getItem('token')
+    const payload = JSON.parse(atob(token.split('.')[1]));
+console.log(payload)
+// الوصول إلى القيم:
+
+const roles = payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
     var userName=document.getElementById('userName');
-    userName.value=inf.username;
+    userName.value=payload["username"];
     var email=document.getElementById('email');
-    email.value=inf.email;
+    email.value=payload["email"];
     var role=document.getElementById('role');
-    role.value=inf.role;
+    role.value=roles;
 })

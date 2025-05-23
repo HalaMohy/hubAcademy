@@ -4,6 +4,10 @@ btnSideBar.addEventListener ('click', (e)=> {
     e.preventDefault();
 sidebar.classList.toggle('open')
 })
+function logout(){
+    localStorage.removeItem ('token')
+    window.location.href='/home/index.html';
+}
 const sidebarLink=document.querySelectorAll('.list.sidebar a')
 const currentPage=window.location.pathname.split('/').pop();
 sidebarLink.forEach(link => {

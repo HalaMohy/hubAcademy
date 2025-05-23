@@ -18,7 +18,7 @@
     justify-content: center;
     text-align: end;
 }
-rgb(19, 67, 97);
+
 .hero .hero-text h1 {
     font-weight: 700;
     font-size: 34px;
@@ -28,7 +28,8 @@ rgb(19, 67, 97);
 .hero .hero-text p {
     font-weight: 400;
     font-size: 24px;
-    color: 
+    color: rgb(19, 67, 97);
+
 }
 
 .hero .btn-hero {
@@ -42,8 +43,7 @@ rgb(19, 67, 97);
     margin: 30px 0px;
     min-height: 90vh;
 }
-
-.feature .feature-title h2 {
+.feature-title h2 {
     font-size: 32px;
     font-weight: 700;
     color: rgb(19, 67, 97);
@@ -53,7 +53,7 @@ rgb(19, 67, 97);
     margin-bottom: 55px;
 }
 
-.feature .feature-title h2 img {
+.feature-title h2 img {
 
     width: 180px;
 }

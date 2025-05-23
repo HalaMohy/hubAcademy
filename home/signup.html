@@ -68,6 +68,30 @@
                     <label for="password" class="form-label">كلمة المرور </label>
                     <input type="password" class="form-control" id="password" placeholder="كلمة المرور" />
                 </div>
+                  <div class="mb-4 text-end">
+                    <label for="UserType" class="form-label"> نوع المستخدم </label>
+                    <select class="form-control" id="UserType" placeholder=" نوع المستخدم">
+                        <option value="">اختار النوع</option>
+                        <option value="Student">طالب</option>
+                        <option value="Moderator">مشرف</option>
+                    </select>
+                </div>
+                <div id="moderatorFields" class="d-none">
+                    <div class="mb-3 text-end">
+                        <label for="bio" class="form-label">نبذة تعريفية (Bio)</label>
+                        <textarea class="form-control" id="bio" rows="3" placeholder="نبذة عنك وخبراتك..."></textarea>
+                    </div>
+
+                    <div class="mb-3 text-end">
+                        <label for="specialty" class="form-label">التخصص</label>
+                        <input type="text" class="form-control" id="specialty" placeholder="مثال: تطوير ويب، تصميم جرافيك" />
+                    </div>
+
+                    <div class="mb-3 text-end">
+                        <label for="certificateFiles" class="form-label">ملفات الشهادات</label>
+                        <input type="file" class="form-control" id="certificateFiles" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+                    </div>
+                </div>
                 <p class='text-end txt-login'>هل لديك حساب مسبقا؟ <a href='login.html'>تسجيل</a></p>
                 <div >
                     <input type="submit" name=""value="انشاء" id="" class='btn btn-submit w-100' />
