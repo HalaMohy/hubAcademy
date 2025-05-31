@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="./images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+     <link rel="stylesheet" href="./assests/css/public.css">
+     <link rel="stylesheet" href="./assests/css/courses-content.css">
+    <title>محتوى الدورة</title>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ">
+
+        <div class="container">
+            <a href="index.html">
+                <div class="nav-logo">
+                    <img src="./images/logo.png" />
+
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+                <ul class="navbar-nav ms-auto" id="navbarNav">
+
+                    <!--<li class="nav-item"></li>
+                        <a class="nav-item nav-link active" href="index.html">الصفحة الرئيسية <span
+                                class="sr-only">(current)</span></a>
+                        <li class="nav-item"></li>
+                        <a class="nav-item nav-link" href="courses.html">الدورات</a>
+                        <li class="nav-item">
+                            <a class="nav-item nav-link join" href="signup.html">انضم لنا</a>
+                        </li>
+                        <a class="nav-link" href="add-courses.html">اضافة الدورة</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="student-courses.html">دوراتي </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="moderator-courses.html">دوراتي </a>
+                        </li>
+                    -->
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4 mt-5">
+        <div id="error-message-content"></div>
+        <div class="course-content-container" > 
+            <h1 id="course-content-title">محتوى الدورة</h1>
+            <p id="course-content-description"></p>
+            
+            <h3 class="mt-4">ملفات ومواد الدورة:</h3>
+            <ul id="course-materials-list" class="material-list">
+
+            </ul>
+        </div>
+    </main>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class='social-media'>
+                        <h3>صفحات التواصل</h3>
+                        <ul class='d-flex gap-4'>
+                            <li class='li-item'><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li class='li-item'><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                            <li class='li-item'><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 contant">
+                    <h3>تواصل معنا</h3>
+                    <ul class="">
+                        <li class='d-flex gap-3 justify-content-start'>
+                            <p>32456789</p>
+                            <i class="fa-solid fa-phone"></i>
+                        </li>
+                        <li class='d-flex gap-3'>
+                            <p> Hala@gmail.com</p>
+                            <i class="fa-solid fa-envelope"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 final-logo">
+                    <div class='img-footer'>
+                        <img src='./images/logo.png' alt="" class='w-100' />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assests/js/main.js"></script> 
+    <script src="./assests/js/courses-content.js"></script>
+</body>
+
+</html>
